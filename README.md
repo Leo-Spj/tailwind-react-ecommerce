@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Iniciando con REACT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Sólo **por primera vez** para una maquina:
 
-## Available Scripts
+	npm install -g create-react-app
 
-In the project directory, you can run:
+Despues, para crear proyectos normalmente:
 
-### `npm start`
+	npx create-react-app NombreDelProyecto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Tambien se puede inicializar React en una **capeta existente**:
+>
+>  **Ojo**: Primero, ubicarse la capeta en cuestión.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ 	npx create-react-app .
 
-### `npm test`
+>Conviene cuando ya tienes creado un repositorio en GitHub.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+------------
+## Iniciando el servidor de desarrollo
 
-### `npm run build`
+Luego de instalado, para iniciar el servidor de desarrollo:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+	npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+******
+## Si el proyecto ya está creado y está en github:
+>Clonarlo y ejecutar:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	npm install
+	npm init
+	npm start
 
-### `npm run eject`
+# GitHub Pages:
+Instalar:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+	npm i gh-pages 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+En el archivo `package.json` agregar justo antes de `dependencies`:
+> Colocar en "link_githubPages" :  
+> Segun la estructura de este link: https://leo-spj.github.io/ecommerce-react-coderhouse/ 
+> : nombre de usuario, github.io, nombre del repositorio github.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+	 "homepage": " link_githubPages ",
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Y en la primera linea dentro de `Scripts` pegar:
 
-## Learn More
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build",
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Importante:
+Cada vez que quiera **subir nuevos cambios al servidor** de github-pages:
 
-### Code Splitting
+	 git push
+	 npm run deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## OPCIONAL:
 
-### Analyzing the Bundle Size
+##### SASS:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://www.npmjs.com/package/sass
 
-### Making a Progressive Web App
+Para trabajar con archivos sass:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+	npm i sass
 
-### Advanced Configuration
+##### Tailwind CSS
+La documentacion oficial en [TailwindCss](https://tailwindcss.com/docs/guides/create-react-app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init -p
 
-### Deployment
+En el archivo `tailwind.config.js` colocar solo el `content`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    module.exports = {
+    ...
+    content: [
+        "./src/**/*.{js,jsx,ts,tsx}",
+    ],
+    ...
 
-### `npm run build` fails to minify
+En `./src/index.css` agregar:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+Y luego correr:
+
+    npm run start
+
+
+##### DaisyUI
+
+La documentacion oficial en [DaisyUI](https://daisyui.com/docs/install/)
+
+Instalar:
+
+    npm i daisyui
+
+Luego agregar en el archivo `tailwind.config.js`:
+
+    module.exports = {
+    //...
+    plugins: [require("daisyui")],
+    }
