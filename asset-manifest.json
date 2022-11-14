@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/tailwind-react-ecommerce/static/css/main.fd5cb1c1.css",
+    "main.js": "/tailwind-react-ecommerce/static/js/main.8a2da57e.js",
+    "static/js/787.a2a8047a.chunk.js": "/tailwind-react-ecommerce/static/js/787.a2a8047a.chunk.js",
+    "static/media/image-product-1.jpg": "/tailwind-react-ecommerce/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/logo.svg": "/tailwind-react-ecommerce/static/media/logo.4fe9c1e86cf9bf600f0c239f6a6e5317.svg",
+    "index.html": "/tailwind-react-ecommerce/index.html",
+    "main.fd5cb1c1.css.map": "/tailwind-react-ecommerce/static/css/main.fd5cb1c1.css.map",
+    "main.8a2da57e.js.map": "/tailwind-react-ecommerce/static/js/main.8a2da57e.js.map",
+    "787.a2a8047a.chunk.js.map": "/tailwind-react-ecommerce/static/js/787.a2a8047a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd5cb1c1.css",
+    "static/js/main.8a2da57e.js"
+  ]
+}
