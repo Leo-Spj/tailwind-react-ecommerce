@@ -1,18 +1,18 @@
 import React from 'react'
-import ItemLinst from './ItemLinst'
+import ItemList from './ItemList'
 
 
 const ItemListContainer = ({greeting}) => {
   return (
 
     <>
-    <div className='max-w-tope bg-orange-50 m-auto '>
-        <div className="m-auto">
-            <h2 >{greeting }</h2>
-        </div>
+    <div className='max-w-tope  m-auto'>
+        
+        <h2 >{greeting }</h2>
+        
 
-        <div className='w-[34rem] bg-orange-300 p-4'>
-            <ItemLinst />     
+        <div className='m-[3px]'>
+            <ItemList />     
         </div>
         
     </div>

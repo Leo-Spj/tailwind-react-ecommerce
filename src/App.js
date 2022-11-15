@@ -1,17 +1,20 @@
 
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
+
 import NavBar from './components/NavBar';
+
 
 function App() {
   return (
     <>
 
       <NavBar/>
-      <ItemListContainer greeting="Bienvenido a Sneakers, un proyecto de FrontendMentor"   />
+      
+      <ItemListContainer/>
 
     </>
   );
 }
 
-export default App;
+export default App
