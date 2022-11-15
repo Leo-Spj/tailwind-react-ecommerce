@@ -1,37 +1,13 @@
-# Iniciando con REACT
 
-Sólo **por primera vez** para una maquina:
-
-	npm install -g create-react-app
-
-Despues, para crear proyectos normalmente:
-
-	npx create-react-app NombreDelProyecto
-
-> Tambien se puede inicializar React en una **capeta existente**:
->
->  **Ojo**: Primero, ubicarse la capeta en cuestión.
-
- 	npx create-react-app .
-
->Conviene cuando ya tienes creado un repositorio en GitHub.
-
-------------
-## Iniciando el servidor de desarrollo
-
-Luego de instalado, para iniciar el servidor de desarrollo:
-
-	npm start
-
-******
-## Si el proyecto ya está creado y está en github:
+## Para iniciar este repo:
 >Clonarlo y ejecutar:
 
 	npm install
 	npm init
 	npm start
-
-# GitHub Pages:
+    
+-------------
+## GitHub Pages:
 Instalar:
 
 	npm i gh-pages 
@@ -52,20 +28,24 @@ Y en la primera linea dentro de `Scripts` pegar:
 #### Importante:
 Cada vez que quiera **subir nuevos cambios al servidor** de github-pages:
 
-	 git push
+Primero hacer un `push` del proyecto, luego:
+
 	 npm run deploy
 
+-------------
+-------------
 ## OPCIONAL:
+-------------
+### SASS:
 
-##### SASS:
-
-https://www.npmjs.com/package/sass
+Documentacion oficial [Sass](https://www.npmjs.com/package/sass)
 
 Para trabajar con archivos sass:
 
 	npm i sass
 
-##### Tailwind CSS
+-------------
+### Tailwind CSS
 La documentacion oficial en [TailwindCss](https://tailwindcss.com/docs/guides/create-react-app)
 
     npm install -D tailwindcss postcss autoprefixer
@@ -90,8 +70,8 @@ Y luego correr:
 
     npm run start
 
-
-##### DaisyUI
+-------------
+### DaisyUI
 
 La documentacion oficial en [DaisyUI](https://daisyui.com/docs/install/)
 
