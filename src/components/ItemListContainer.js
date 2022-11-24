@@ -1,10 +1,10 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-
 const ItemListContainer = ({greeting}) => {
-  return (
 
+
+  return (
     <>
     <div className='max-w-tope  m-auto'>
 
@@ -13,12 +13,11 @@ const ItemListContainer = ({greeting}) => {
         </div>  
         
         
-        <ItemList />     
+        <ItemList busqueda='products'/>     
         
         
     </div>
     </>
-
   )
 }
 

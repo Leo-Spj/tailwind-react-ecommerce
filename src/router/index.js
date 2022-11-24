@@ -1,17 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 
-export const Router = createBrowserRouter([
+import App from "../App.js";
 
-    { path: "/", element: <App /> },
 
-    { path: "item/:id",
-    element: <ItemDetailContainer /> },
+export const router = createBrowserRouter([
 
-    { path: "category/:id",
-    element: <ItemListContainer /> },
-
-    { path: "cart",
-    element: <Cart /> },
-
+    {   path: "/", 
+        element: <App /> ,
+    },
 
 ]);

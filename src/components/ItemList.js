@@ -1,14 +1,14 @@
 import React,{useState, useEffect} from 'react'
 import Item from './Item.js'
 
-const ItemLinst = () => {
+const ItemLinst = ({busqueda}) => {
   const[productos, setProductos] = useState([]);
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products`)
+    fetch(`https://fakestoreapi.com/${busqueda}`)
     .then( (data)=>data.json())
     .then( (data)=>setProductos(data))
-    // cuando está gargando se muestra un spinner:
+    
     .catch( (error)=>console.log(error))
     
   }, []);
