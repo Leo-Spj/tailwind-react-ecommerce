@@ -5,7 +5,7 @@ import App from "../App.js";
 
 export const router = createBrowserRouter([
 
-    {   path: "/", 
+    {   path: "home", 
         element: <App /> ,
     },
 
